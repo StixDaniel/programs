@@ -36,14 +36,14 @@ public class RegexUe2
         System.out.println("11: "+Pattern.matches("[a-zA-Z]{3}", "apZx"));//False
 
         // returns true if the string contains 0 or more non-digits
-        System.out.println("12: "+Pattern.matches(, "abcde")); //True
-        System.out.println("13: "+Pattern.matches(, "abcde123")); //False
+        System.out.println("12: "+Pattern.matches("[^0-9]+", "abcde")); //True
+        System.out.println("13: "+Pattern.matches("[^0-9]+", "abcde123")); //False
 
     /* Boundary Matchers example; * use ^ and $
        returns true if "These" is the beginning and the end of the string
     */
-        System.out.println("14: "+Pattern.matches(, "These are regular expressions")); //False
-        System.out.println("15: "+Pattern.matches(, "These")); //True
-        System.out.println("16: "+Pattern.matches(, "are regular expressions")); //False
+        System.out.println("14: "+Pattern.matches("These$", "These are regular expressions")); //False
+        System.out.println("15: "+Pattern.matches("These$", "These")); //True
+        System.out.println("16: "+Pattern.matches("These$", "are regular expressions")); //False
     }
 }
