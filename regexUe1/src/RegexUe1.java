@@ -11,6 +11,6 @@ public class RegexUe1
         System.out.println(Pattern.matches("[0-9]{4}","4873"));
         System.out.println(Pattern.matches("[0-9]{4}","4600"));
 
-        System.out.println(Pattern.matches("https://www[.] .*+ [.][a-z]+","https://www.youtube.com"));
+        System.out.println(Pattern.matches("https://www[.][a-zA-Z0-9]+[.][a-z]*","https://www.youtube.com"));
     }
 }
