@@ -20,15 +20,9 @@ public class PrintSorted
 
     public void multiply ()
     {
-        /**
         for (Integer p : list)
         {
             p = p * 10;
-        }
-         */
-        for (int x = 0; x < list.size(); x++)
-        {
-            list[x] * 10;
         }
     }
 
