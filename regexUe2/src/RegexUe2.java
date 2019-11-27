@@ -6,7 +6,6 @@
  */
 
 import java.util.regex.Pattern;
-
 public class RegexUe2
 {
     public static void main(String args[]){
@@ -42,8 +41,12 @@ public class RegexUe2
     /* Boundary Matchers example; * use ^ and $
        returns true if "These" is the beginning and the end of the string
     */
-        System.out.println("14: "+Pattern.matches("These$", "These are regular expressions")); //False
-        System.out.println("15: "+Pattern.matches("These$", "These")); //True
-        System.out.println("16: "+Pattern.matches("These$", "are regular expressions")); //False
+        System.out.println("14: "+Pattern.matches("These.*These|These", "These are regular expressions")); //False
+        System.out.println("15: "+Pattern.matches("These.*These|These", "These")); //True
+        System.out.println("16: "+Pattern.matches("These.*These|These", "are regular expressions")); //False
+
+    // Webadressen
+
+        System.out.println("Webadressen: "+Pattern.matches("https://www [.] [^$.]+ [.] [com|at|net|io|de|org]", "https://www.youtube.com"));
     }
 }
